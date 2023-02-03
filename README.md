@@ -1,4 +1,4 @@
-## Procedurally Generate Live Music
+## Procedurally Generated Live MIDI
 
 Generates MIDI for music in real time
 
@@ -12,8 +12,4 @@ I'd been thinking about making something like this for ages but never had time, 
 
 The system is entirely probabalistic. Every decision is made by weighted randomization. It's not AI, theres no training data or feedback. I entirely worked by listening to the random beeps and boops, guessing and checking different ways to tweak the weights. 
 
-The chord progression is pre-programmed, as I was mostly interested in melody generation. Each beat the lead melody has a chance to start playing any note in the current scale. There's a ton a math for the odds of playing each note, as technically every note has some chance of playing. The weighting primarily makes the melody more likely to move on downbeats, play notes which don't clash, and follow a similar structure to the last measure. When a lead note is played, the probability of each potential note is displayed on the left hand plot.
-
-Every 8 measures, a number of configuration variables are modified. This creates a more comprehensible structure, as different patterns can be observed within each configuration. First, the beat pattern is tweaked. Each chord is split into beats, which are grouped into notes. This creates a similar pattern to tuplets in traditional music. 
-
-The bass and alto voices also randomly cycle through several different settings . These specify the algorithm for note pitch and timing, reading the beat division, chord position, and lead voice to select notes. Finally, two threshold values are tweaked for the lead and alto voices. These change the threshold required for a note to play, varying how frequently notes play and move. 
+### [Link to Full Write-Up](https://www.garettmorrison.net/posts/proceduralmidi/)
